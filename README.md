@@ -4,9 +4,13 @@ A python command line interface for pastebin.com
 
 ## Installation
 First make sure you have python installed on your system.
+
+Then install the required packages
 ```
 pip install requests
 ```
+
+Then get your api key from [here](https://pastebin.com/doc_api#1)
 That's it!
 
 ## Help message
@@ -27,13 +31,13 @@ options:
 To paste a code:
 
 
-`python3 pastebin.py -k <<whatever your api key is>> -f test.txt`
+`python3 pastein.py -k <<whatever your api key is>> -f test.txt`
 
 
 To get a code:
 
 
-`python3 pastebin.py -c bVygpfYz`
+`python3 pastein.py -c bVygpfYz`
 
 
 ## Notes
