@@ -2,15 +2,11 @@
 import ui
 import models
 import argparse
-import requests as rq
 
 
 __version__ = '0.1.0'
 
 API_POST_URL = 'https://pastebin.com/api/api_post.php'
-
-# parser -> Paste   /Read -> validator -> request -> exception_handler
-#           \->file  \->get
 
 def arg_parser():
     parser = argparse.ArgumentParser(

@@ -11,16 +11,11 @@ class Paste:
 
         self.file = ''
         self.filename = ''
-        self.paste_format = ''
 
     def validate(self):
         try:
             self.file = open(self._file, 'r')
             self.filename = str(self._file)
-
-            self.paste_format = str(self._file).split('.')[1]
-            if self.paste_format == 'txt':
-                self.paste_format = ''
         except FileNotFoundError:
             print(ui.nor, 'file not found!. specify your file with -f.')
             exit(1)
@@ -32,12 +27,9 @@ class Paste:
             'api_option': (None, 'paste'),
             'api_paste_code': (None, self.file),
             'api_paste_name': (None, self.filename),
-            'api_paste_format': (None, self.paste_format),
         }
         res = rq.post(self.API_URL, files=data)
         content = res.content.decode('utf-8')
-        # print(res.content)
-        # print(self.paste_format)
 
         if content.endswith('invalid api_dev_key'):
             print(ui.nor, 'invalid api key!. specify your key with -k.')
