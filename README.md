@@ -31,13 +31,17 @@ options:
 To paste a code:
 
 
-`python3 pastein.py -k <<whatever your api key is>> -f test.txt`
+```
+python3 pastein.py -k <<whatever your api key is>> -f test.txt
+```
 
 
 To get a code:
 
 
-`python3 pastein.py -c bVygpfYz`
+```
+python3 pastein.py -c bVygpfYz
+````
 
 
 ## Notes
